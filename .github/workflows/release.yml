@@ -32,7 +32,7 @@ jobs:
       - name: Archive production artifacts
         run: |
           mkdir -p release-artifacts
-          zip -r release-artifacts/build.zip dist package.json README.md LICENSE
+          tar -czvf release-artifacts/dist.tar.gz dist package.json README.md LICENSE
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
