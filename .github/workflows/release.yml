@@ -32,6 +32,7 @@ jobs:
       - name: Archive production artifacts
         run: |
           mkdir -p release-artifacts
+          mv dist/src/* dist/
           tar -czvf release-artifacts/dist.tar.gz dist package.json README.md LICENSE
 
       - name: Create GitHub Release
